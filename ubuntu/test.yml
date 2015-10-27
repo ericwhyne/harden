@@ -1,0 +1,5 @@
+- hosts: test
+  remote_user: ubuntu
+  tasks:
+    - name: write a test file
+      lineinfile: dest=/home/ubuntu/test.txt line="On two occasions I have been asked, 'Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?' I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question. - Charles Babbage" create=yes

@@ -1,0 +1,8 @@
+---
+- name: 'fail2ban playbook'
+  hosts: test
+  user: ubuntu
+  sudo: yes
+
+  roles:
+    - fail2ban
