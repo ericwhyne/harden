@@ -1,8 +1,9 @@
 ---
-- name: 'fail2ban playbook'
+- name: 'Harden Playbook'
   hosts: test
   user: ubuntu
   sudo: yes
 
   roles:
     - fail2ban
+    - tripwire
