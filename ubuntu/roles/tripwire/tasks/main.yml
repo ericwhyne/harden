@@ -5,6 +5,11 @@
   tags:
     - apt
 
+# Set Config
+- name: Install tripwire
+  command: sudo twadmin --create-polfile /etc/tripwire/twpol.txt; sudo tripwire --init;sudo tripwire --check
+
+
 - name: Install Mailutils
   apt: pkg=mailutils state=installed update-cache=yes
   register: mailutils_installed
