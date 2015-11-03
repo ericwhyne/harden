@@ -1,0 +1,14 @@
+---
+- name: Install tripwire
+  apt: pkg=tripwire state=installed update-cache=yes
+  register: tripwire_install
+  tags:
+    - apt
+
+- name: Install Mailutils
+  apt: pkg=mailutils state=installed update-cache=yes
+  register: mailutils_installed
+  tags:
+    - apt
+  #TO-DO: Cron Job to Email Tripwire Reports
+  #cron: 30 3 * * * /usr/sbin/tripwire --check | mail -s "Tripwire report for `uname -n`" vishalhlall@gmail.com

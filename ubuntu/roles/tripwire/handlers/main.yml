@@ -1,0 +1,6 @@
+---
+- name: restart tripwire
+  service: name=tripwire state=restarted
+
+- name: reload tripwire
+  service: name=tripwire state=reloaded
